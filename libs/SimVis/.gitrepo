@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:Ovilab/SimVis
+	branch = dev
+	commit = 24a11c6f57a233230e78815df8ff0361a5b0c961
+	parent = 201dfffb93a2a577dbc1e6be219e967b809b4bc1
+	cmdver = 0.3.1
