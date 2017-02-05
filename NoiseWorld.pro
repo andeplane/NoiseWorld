@@ -1,8 +1,10 @@
-QT += qml quick
+QT += widgets opengl openglextensions qml quick 3dcore 3drender 3dinput 3dquick
 
 CONFIG += c++11
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    noisesimulator.cpp \
+    mousemover.cpp
 
 RESOURCES += qml.qrc
 
@@ -18,6 +20,8 @@ QML_DESIGNER_IMPORT_PATH =
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
 
+include(libs/SimVis/package_vendor.pri)
+
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
@@ -27,3 +31,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    noisesimulator.h \
+    mousemover.h
